@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processing Request</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 0;
+        }
+
+        .container {
+            padding: 30px;
+            max-width: 450px;
+        }
+
+        .spinner {
+            width: 55px;
+            height: 55px;
+            border: 5px solid #ddd;
+            border-top: 5px solid #2563eb;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 25px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        #error {
+            display: none;
+        }
+
+        .error-icon {
+            font-size: 60px;
+            color: #dc2626;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="loading">
+            <div class="spinner"></div>
+            <h2>Loading...</h2>
+            <p>Please wait while we process your request.</p>
+        </div>
+
+        <div id="error">
+            <div class="error-icon">⚠</div>
+            <h2>Oops! Something Went Wrong</h2>
+            <p>Your request could not be completed. Please try again.</p>
+            <button onclick="window.location.href='index.html'">
+                Go Back
+            </button>
+        </div>
+
+    </div>
+
+    <script>
+        setTimeout(function () {
+            document.getElementById("loading").style.display = "none";
+            document.getElementById("error").style.display = "block";
+        }, 7000);
+    </script>
+</body>
+</html>
