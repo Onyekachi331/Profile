@@ -19,14 +19,16 @@ header .icon{
 .head2{
   padding: 20px;
   background-color: lightskyblue;
-  display: flex; 
-  margin: auto;
-  font-weight: 600;
-  font-size: 27px;
+  display: flex;
+  font-weight: 700;
+  font-size: 22px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: left;
+}
+
+.head2 span{
+  margin-left: 100px;
 }
 
 .body{
